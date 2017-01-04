@@ -31,12 +31,12 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-         it('Has url defined and not null',function(){
-           for(var i=0;i<allFeeds.length;i++){
-             expect(allFeeds[i].url).toBeDefined();
-             expect(allFeeds[i].url.length > 0).toBe(true);
-           }
-         });
+         it("Has name and isn't null", function() {
+          for(var i = 0; i < allFeeds.length; i++){
+            expect(allFeeds[i].name).toBeDefined();
+            expect(allFeeds[i].name.length > 0).toBe(true);
+          }
+        });
 
 
         /* TODO: Write a test that loops through each feed
@@ -55,7 +55,7 @@ $(function() {
 
     /* TODO: Write a new test suite named "The menu" */
     describe('The menu', function() {
-        it('Has menu hidden by default', function()){
+        it('Has menu hidden by default', function() {
           expect($('body').hasClass('menu-hidden')).toBe(true);
         });
         /* TODO: Write a test that ensures the menu element is
@@ -63,7 +63,7 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-         it('Display/hide menu on click', function()){
+         it('Display/hide menu on click', function(){
            $('.menu-icon-link').click();
            expect($('body').hasClass('menu-hidden')).toBe(false);;
            $('.menu-icon-link').click();
@@ -83,10 +83,10 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
-          it('Have a single Entry',function(done)
-        {
-          expect($('.feed.entry'),.length > 0).toBe(true);
-        });
+          it('Have a Single Entry', function(done) {
+          expect($('.feed .entry').length > 0).toBe(true);
+          done();
+       });
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
