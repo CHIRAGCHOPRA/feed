@@ -86,7 +86,7 @@ $(function() {
                     loadFeed(0, function() {
             feed = $('.header-title').html();
             loadFeed(1, function(){ //nested load2 to meet async function demands
-                 $newfeed = $('.header-title').html();
+                 newfeed = $('.header-title').html();
                  done();
             });
          });
